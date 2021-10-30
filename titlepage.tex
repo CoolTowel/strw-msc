@@ -1,0 +1,39 @@
+\newgeometry{margin=30mm}
+\makeatletter
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            \Huge\textbf{\@title}
+        
+        \vfill
+        
+        \includegraphics[width=0.25\textwidth]{logo-RGB.png}
+        
+        \vspace{2cm}
+        
+        \begin{minipage}[b]{.75\textwidth}
+            \color{black}
+            \begin{center}
+                \Large
+                \textsc{Thesis} \\ \vskip 0.3em
+                \normalsize
+                submitted in partial fulfillment \\
+                of the requirements for the degree of \\
+                \Large \textsc{Master of Science} \\ \vskip 0.3em
+                \normalsize in \\
+                \Large\textsc{Astronomy} \\
+            \vskip 1em
+            \normalsize
+            Author :              \hfill {\@author} \\
+            Student ID :         \hfill {\@studentid} \\
+            Supervisor :         \hfill {\@supervisor} \\
+            Second corrector : \hfill {\@corrector}
+            \par
+            \vskip 1em
+            Leiden, The Netherlands, \@date
+            \end{center}
+        \end{minipage}
+    \end{center}
+\end{titlepage}
+\makeatother
+\restoregeometry

@@ -1,0 +1,56 @@
+% % below uesd in TeXshop or TeXwork do not delete it
+% !TEX program = xelatexmk
+
+% add colourful option to make the hyperlinks colourful.
+\documentclass[colourful]{strw-msc}
+
+% set your thesis info here
+\title{An Awesome Thesis}
+\author{Lei Li}
+\studentid{2718281}
+\supervisor{J. H. Oort}
+\corrector{F. Kaiser}
+\date{July 2077}
+
+\affiliation{Leiden Observatory, Leiden University}
+\address{P.O. Box 9513, NL-2300 RA Leiden, The Netherlands}
+\degree{Master of Science}
+\major{Astronomy}
+
+\definecolor{mypink}{RGB}{219, 48, 122}
+\newcommand{\tbd}{\textcolor{mypink}{(to be done)}}
+
+% % input your abstract here
+
+% \abstracttext{} 
+
+% use aa_url ref to make a hyperlink to DOI and ADS for ref items. (aa_url.bst comes from https://github.com/yangcht/AA-bibstyle-with-hyperlink). 
+% It will make the journal name be magenta. And if you use colourful option in \documentclass{}, the page number will be blue. Use the 'aa' bib style to keep them black. 
+% use aa for normal aa style ref items. 
+\bibliographystyle{reference_setting/aa_url} 
+
+\begin{document}
+
+\frontmatter
+
+\input{titlepage}
+
+\input{abstract}
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction}
+\input{chapters/ch1}
+
+% % references
+
+\bibliography{references} % put your bibTeX citation items in bib.bib in the root directory. If you want to use the colourful hyperlinks in the bibliography which linking to ADS, make sure the bibTeX export from ADS.
+
+\appendix
+\chapter{An Appendix}
+
+\input{chapters/appendix}
+
+\end{document}
