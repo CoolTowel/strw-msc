@@ -42,6 +42,17 @@
 \gdef\degree#1{\gdef\@degree{#1}}
 \gdef\major#1{\gdef\@major{#1}}
 
+% Math env.
+\RequirePackage{amsmath}
+
+% unicode-math
+\RequirePackage[mathrm=sym,
+		    mathup=sym,
+		    mathit=sym,
+		    mathsf=sym,
+		    mathbf=sym,
+		    mathtt=sym]{unicode-math}
+
 % font: use utopia
 \RequirePackage{fourier-otf}
 
@@ -87,10 +98,6 @@
             }
 
 \ProcessOptions\relax
-
-% Math env.
-\RequirePackage{amsmath}
-% \RequirePackage{amssymb} % Not needed for fourier-otf font package in XeTex
 
 % insertion of graphics
 \RequirePackage{graphicx}
