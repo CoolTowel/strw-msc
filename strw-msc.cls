@@ -47,14 +47,18 @@
 
 % unicode-math
 \RequirePackage[mathrm=sym,
-		    mathup=sym,
-		    mathit=sym,
-		    mathsf=sym,
-		    mathbf=sym,
-		    mathtt=sym]{unicode-math}
+		            mathup=sym,
+		            mathit=sym,
+		            mathsf=sym,
+		            mathbf=sym,
+		            mathtt=sym]{unicode-math}
 
-% font: use utopia
-\RequirePackage{fourier-otf}
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+% font: use utopia or linux-libertinus
+\RequirePackage{libertinus-otf}
+% \RequirePackage{fourier-otf}
+% \RequirePackage{kpfonts-otf}
 
 % % layout settings
 
@@ -89,12 +93,12 @@
 \RequirePackage[hidelinks]{hyperref}
 
 \DeclareOption{colourful}{
-\hypersetup{
-            colorlinks = true,
-            linkcolor = linkred,
-            urlcolor  = linkblue,
-            citecolor = linkblue,
-            anchorcolor = linkblue}
+  \hypersetup{
+              colorlinks = true,
+              linkcolor = linkred,
+              urlcolor  = linkblue,
+              citecolor = linkblue,
+              anchorcolor = linkblue}
             }
 
 \ProcessOptions\relax
